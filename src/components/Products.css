@@ -1,0 +1,16 @@
+ul{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            250px,
+            1fr
+        )
+    );
+}
+
+ul img{
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
