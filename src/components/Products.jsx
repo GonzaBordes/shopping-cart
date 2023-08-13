@@ -1,4 +1,5 @@
 import { useCart } from '../hooks/useCart'
+import { Filters } from './Filters'
 import './Products.css'
 
 export const Products = ({products}) => {
@@ -12,7 +13,12 @@ export const Products = ({products}) => {
 
 
   return (
-    <ul>
+    <>
+      <div>
+        <h2>Products</h2>
+        <Filters/>
+      </div>
+       <ul>
         {
         products.map(product => {
           const isProductInCart = checkProductInCart(product)
@@ -34,5 +40,7 @@ export const Products = ({products}) => {
         
         }
     </ul>
+    </>
+   
   )
 }

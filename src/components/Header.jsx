@@ -1,11 +1,10 @@
-import { Filters } from "./Filters"
+
 
 export const Header = () => {
   return (
-    <>
-        <h1>Shopping cart by Gonza</h1>
-        <Filters />
-    </>
+    <header className="container border-t border-purple-500">
+        <h1>Shopping Cart</h1>
+    </header>
 
   )
 }
