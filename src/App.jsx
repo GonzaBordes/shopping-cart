@@ -8,6 +8,8 @@ import { IS_DEVELOPMENT } from './config'
 import { useFilters } from './hooks/UseFilters'
 import { Cart } from './components/Cart'
 import { CartProvider } from './context/cart'
+import './index.css'
+import { useCart } from './hooks/useCart'
 
 
 function App() {
@@ -17,13 +19,16 @@ function App() {
   const filteredProducts = filterProducts(products)
 
   return (
-    <CartProvider>
-      <Header />
-      <HeroSection/>
-      <Cart />
-      <Products products={filteredProducts} />
-      {IS_DEVELOPMENT && <Footer />}
-    </CartProvider>
+    <div className="relative">
+      <CartProvider>
+        <Header />
+        <HeroSection />
+        <Cart />
+        <Products products={filteredProducts} />
+        {IS_DEVELOPMENT && <Footer />}
+      </CartProvider>
+    </div>
+    
   )
 }
 
